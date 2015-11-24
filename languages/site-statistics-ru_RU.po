@@ -1,0 +1,93 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: newspages v1.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-11-18 16:21+0200\n"
+"PO-Revision-Date: 2015-11-18 16:21+0200\n"
+"Last-Translator: root <alex_dyak@mail.ru>\n"
+"Language-Team: \n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;"
+"translate\n"
+"X-Poedit-Basepath: ..\n"
+"X-Textdomain-Support: yes\n"
+"X-Generator: Poedit 1.8.5\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: site-statistics.php\n"
+"X-Poedit-SearchPath-2: statistics-admin-form.phtml\n"
+"X-Poedit-SearchPath-3: widget.php\n"
+
+#: widget.php:17
+msgid "Add site statistics"
+msgstr "Добавляет статистику по сайту"
+
+#: widget.php:20
+msgid "Site statistics"
+msgstr "Статистика сайта"
+
+#: widget.php:69
+msgid "Number of topics in this forum:  "
+msgstr "Количество тем в этом форуме: "
+
+#: widget.php:70
+msgid "Number of messages in this forum:  "
+msgstr "Количество сообщений в форуме: "
+
+#: widget.php:78
+msgid "Number of posts in all blogs multisite:  "
+msgstr "Количество постов во всег блогах: "
+
+#: widget.php:94
+msgid "There are no users currently online"
+msgstr "Нет пользователей онлайн"
+
+#: widget.php:96
+msgid "Number of users online:  "
+msgstr "Количество  пользователей онлайн: "
+
+#: widget.php:128
+msgid "Statistics"
+msgstr "Статистика"
+
+#: statistics-admin-form.phtml:2
+msgid "Title:"
+msgstr "Название:"
+
+#~ msgid "NewsPages"
+#~ msgstr "Страницы новостей"
+
+#~ msgid "NewsPage"
+#~ msgstr "Страница новостей "
+
+#~ msgid "Categories"
+#~ msgstr "Категории"
+
+#~ msgid "NewsPage Information"
+#~ msgstr "Дополнительная информация о странице"
+
+#~ msgid "Last NewsPages"
+#~ msgstr "Последние страницы новостей"
+
+#~ msgid "Show Last NewsPages"
+#~ msgstr "Показать последние страницы новостей"
+
+#~ msgid "Admin comment:"
+#~ msgstr "Коментарий администратора: "
+
+#~ msgid "Alternative title:"
+#~ msgstr "Альтернативное название:   "
+
+#~ msgid "Comment: "
+#~ msgstr "Комментарий:  "
+
+#~ msgid "Alternative title: "
+#~ msgstr "Альтернативное название:"
+
+#~ msgid "Number of shown NewsPages:"
+#~ msgstr "Количество отображаемых новостей:"
