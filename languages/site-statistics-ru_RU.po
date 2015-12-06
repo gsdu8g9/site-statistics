@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: newspages v1.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-18 16:21+0200\n"
-"PO-Revision-Date: 2015-11-18 16:21+0200\n"
+"POT-Creation-Date: 2015-12-06 10:44+0200\n"
+"PO-Revision-Date: 2015-12-06 10:44+0200\n"
 "Last-Translator: root <alex_dyak@mail.ru>\n"
 "Language-Team: \n"
 "Language: ru\n"
@@ -22,6 +22,7 @@ msgstr ""
 "X-Poedit-SearchPath-1: site-statistics.php\n"
 "X-Poedit-SearchPath-2: statistics-admin-form.phtml\n"
 "X-Poedit-SearchPath-3: widget.php\n"
+"X-Poedit-SearchPath-4: widget-output.phtml\n"
 
 #: widget.php:17
 msgid "Add site statistics"
@@ -31,33 +32,33 @@ msgstr "Добавляет статистику по сайту"
 msgid "Site statistics"
 msgstr "Статистика сайта"
 
-#: widget.php:69
-msgid "Number of topics in this forum:  "
-msgstr "Количество тем в этом форуме: "
-
-#: widget.php:70
-msgid "Number of messages in this forum:  "
-msgstr "Количество сообщений в форуме: "
-
-#: widget.php:78
-msgid "Number of posts in all blogs multisite:  "
-msgstr "Количество постов во всег блогах: "
-
-#: widget.php:94
-msgid "There are no users currently online"
-msgstr "Нет пользователей онлайн"
-
-#: widget.php:96
-msgid "Number of users online:  "
-msgstr "Количество  пользователей онлайн: "
-
-#: widget.php:128
+#: widget.php:102
 msgid "Statistics"
 msgstr "Статистика"
 
 #: statistics-admin-form.phtml:2
 msgid "Title:"
 msgstr "Название:"
+
+#: widget-output.phtml:6
+msgid "Number of topics in this forum:  "
+msgstr "Количество тем в этом форуме: "
+
+#: widget-output.phtml:7
+msgid "Number of messages in this forum:  "
+msgstr "Количество сообщений в форуме: "
+
+#: widget-output.phtml:8
+msgid "Number of posts in all blogs multisite:  "
+msgstr "Количество постов во всег блогах: "
+
+#: widget-output.phtml:16
+msgid "Number of users online:  "
+msgstr "Количество  пользователей онлайн: "
+
+#: widget-output.phtml:18
+msgid "There are no users currently online"
+msgstr "Нет пользователей онлайн"
 
 #~ msgid "NewsPages"
 #~ msgstr "Страницы новостей"

@@ -1,0 +1,20 @@
+<?php
+echo $args['before_widget'];
+if ( ! empty( $title ) ) {
+    echo $args['before_title'] . __( $title, 'site-statistics' ) . $args['after_title'];
+}
+echo _e( 'Number of topics in this forum:  ', 'site-statistics' ) . $counter_topics . '<br/>';
+echo _e( 'Number of messages in this forum:  ', 'site-statistics' ) . ( $counter_topics + $counter_children ) . '<br/>';
+echo _e( 'Number of posts in all blogs multisite:  ', 'site-statistics' ) . $query->post_count . '<br/>';
+//get the number of users online
+if ( bp_has_members( 'type = online' ) ) {
+    $users_count = 0;
+    while ( bp_members() ) {
+        bp_the_member();
+        $users_count++;
+    }
+    echo _e( 'Number of users online:  ', 'site-statistics' ) . $users_count . '<br/>';
+} else {
+    echo  _e( 'There are no users currently online', 'site-statistics' ) . '<br/>';
+}
+echo $args['after_widget'];

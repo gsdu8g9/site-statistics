@@ -6,16 +6,16 @@
  * Time: 19:26
  */
 
-class Site_statistics extends WP_Widget {
+class Site_Statistics extends WP_Widget {
 
     /**
      *
      */
     public  function __construct(){
         $widget_ops = apply_filters( 'site_statistics', array(
-                'classname' => 'site_statistics',
-                'description' => __( 'Add site statistics', 'site-statistics' )
-            ) );
+            'classname' => 'site_statistics',
+            'description' => __( 'Add site statistics', 'site-statistics' )
+        ) );
 
         parent::__construct( false, __( 'Site statistics', 'site-statistics'  ), $widget_ops );
     }
@@ -27,11 +27,6 @@ class Site_statistics extends WP_Widget {
 
         $title = apply_filters( 'widget_title', $instance['title'] );
 
-        echo $args['before_widget'];
-
-        if ( ! empty( $title ) ) {
-            echo $args['before_title'] . __( $title, 'site-statistics' ) . $args['after_title'];
-        }
         //get number topics in the forum
         $post = get_post();
         if( $post->post_type === 'forum' ) {
@@ -66,8 +61,6 @@ class Site_statistics extends WP_Widget {
             }
             $counter_topics = $topics->post_count;
         }
-        echo _e( 'Number of topics in this forum:  ', 'site-statistics' ) . $counter_topics . '<br/>';
-        echo _e( 'Number of messages in this forum:  ', 'site-statistics' ) . ( $counter_topics + $counter_children ) . '<br/>';
 
         //get the number of articles in all blogs multisite
         $args_post = array(
@@ -75,27 +68,8 @@ class Site_statistics extends WP_Widget {
             'post_type' => 'post',
         );
         $query = new WP_Query( $args_post );
-        echo _e( 'Number of posts in all blogs multisite:  ', 'site-statistics' ) . $query->post_count . '<br/>';
 
-        //get the number of users online
-        $args_user = array(
-            'user_id'         => 0,
-            'type'            => 'online',
-        );
-
-        $users_count = 0;
-
-        if ( bp_has_members( $args_user ) ) {
-            while ( bp_members() ) {
-                bp_the_member();
-                $users_count++;
-            }
-        } else {
-            _e( 'There are no users currently online', 'site-statistics' );
-        }
-        echo _e( 'Number of users online:  ', 'site-statistics' ) . $users_count . '<br/>';
-
-        echo $args['after_widget'];
+        include( 'widget-output.phtml' );
     }
 
     /**
