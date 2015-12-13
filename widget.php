@@ -43,6 +43,7 @@ class Site_Statistics extends WP_Widget {
 
         $counter_topics = 0;
         $counter_children = 0;
+        $users_count = 0;
 
         if ( $topics->have_posts() ) {
             while ( $topics->have_posts() ) {
@@ -68,6 +69,16 @@ class Site_Statistics extends WP_Widget {
             'post_type' => 'post',
         );
         $query = new WP_Query( $args_post );
+
+        // Setup args for querying members.
+        $members_args = array(
+            'user_id'         => 0,
+            'type'            => 'online',
+            'per_page'        => $settings['max_members'],
+            'max'             => $settings['max_members'],
+            'populate_extras' => true,
+            'search_terms'    => false,
+        );
 
         include( 'widget-output.phtml' );
     }
