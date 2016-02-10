@@ -50,11 +50,11 @@ msgstr "Количество сообщений в форуме: "
 
 #: widget-output.phtml:8
 msgid "Number of posts in all blogs multisite:  "
-msgstr "Количество постов во всег блогах: "
+msgstr "Количество постов во всех блогах: "
 
 #: widget-output.phtml:16
-msgid "Number of users online:  "
-msgstr "Количество  пользователей онлайн: "
+msgid "Users online:  "
+msgstr "Пользователи онлайн: "
 
 #: widget-output.phtml:18
 msgid "There are no users currently online"

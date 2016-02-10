@@ -63,15 +63,23 @@ class Site_Statistics extends WP_Widget {
             $counter_topics = $topics->post_count;
         }
 
-        //get the number of articles in all blogs multisite
-        $args_post = array(
-            'numberposts'     => -1,
-            'post_type' => 'post',
-        );
-        $query = new WP_Query( $args_post );
+	    // Get all sites in the network.
+	    $blogs = get_last_updated();
+		$posts_count = 0;
+	    foreach ( $blogs as $blog ) {
+		    switch_to_blog( $blog["blog_id"] );
+		    //get the number of articles in all blogs multisite
+		    $count_posts = wp_count_posts();
+		    $published_posts = $count_posts->publish;
+			$posts_count += $published_posts;
+	    }
+	    // This function needs to return to the current blog.
+	    restore_current_blog();
+
 
         // Setup args for querying members.
-        $members_args = array(
+	    $settings     = array();
+	    $members_args = array(
             'user_id'         => 0,
             'type'            => 'online',
             'per_page'        => $settings['max_members'],
